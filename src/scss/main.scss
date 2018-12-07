@@ -1,0 +1,18 @@
+@import './variables';
+@import './normalize';
+
+@import 'partials/header';
+@import './partials/home';
+
+* {
+      box-sizing: border-box;
+}
+body {
+      font-family: 'Lato', 'LeckerliOne', 'Montserrat', 'sans-serif';
+}
+
+.container {
+      max-width: 1024px;
+      margin: 0 auto;
+      padding: 0 15px;
+}
