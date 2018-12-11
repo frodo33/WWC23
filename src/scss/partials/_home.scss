@@ -4,7 +4,6 @@
       background-size: cover;
       background-attachment: fixed;
       width: 100%;
-      height: 100%;
 
       & .container {
             position: relative;
@@ -14,10 +13,10 @@
       &_content {
             color: #ffffff;
             width: 60%;
-            padding: 150px 0;
+            padding: 150px 0 100px 0;
       }
 
-      &_section-title {
+      &_title {
             font-family: "Leckerli One";
             font-size: 33px;
             font-weight: 400;
@@ -69,12 +68,12 @@
       }
 
       &_img {
-            max-width: 500px;
+            max-width: 550px;
             min-width: 50px;
-            width: 50%;
+            width: 60%;
             position: absolute;
-            bottom: 120px;
-            right: -30px;
+            bottom: -30px;
+            right: 0;
             z-index: -1;
 
             & img {

@@ -3,16 +3,25 @@
 
 @import 'partials/header';
 @import './partials/home';
+@import './partials/about-us';
+@import './partials/services';
+@import './partials/profile';
+@import './partials/client';
 
 * {
       box-sizing: border-box;
 }
 body {
       font-family: 'Lato', 'LeckerliOne', 'Montserrat', 'sans-serif';
+      font-size: 17px;
 }
 
 .container {
-      max-width: 1024px;
+      max-width: 1224px;
       margin: 0 auto;
       padding: 0 15px;
+
+      @media (max-width: 1024px) {
+            padding: 0 50px;
+      }
 }

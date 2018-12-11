@@ -1,0 +1,70 @@
+.services {
+      background: #007af3;
+      color: #ffffff;
+      padding: 30px 0;
+
+      & .container {
+            display: flex;
+            flex-wrap: wrap;
+      }
+
+      &_title {
+            font-family: "Leckerli One";
+            font-size: 33px;
+            font-weight: 400;
+            width: 100%;
+            text-align: center;
+            margin: 10px 0;
+      }
+
+      &_text {
+            font-family: Montserrat;
+            font-size: 35px;
+            font-weight: 900;
+            width: 100%;
+            text-align: center;
+            margin: 0;
+      }
+
+      &_card-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 0;
+
+      }
+
+      &_card {
+            width: 33%;
+            padding-left: 100px;
+
+            &-subtitle1,
+            &-subtitle2,
+            &-subtitle3 {
+                  font-size: 17px;
+                  font-weight: 800;
+                  line-height: 24px;
+                  text-transform: uppercase;
+                  position: relative;
+
+                  &:after {
+                        position: absolute;
+                        top: 0;
+                        left: -80px;
+                        width: 50px;
+                        height: 50px;
+                  }
+            }
+
+            &-subtitle1:after{
+                  content: url('/images/1.svg');
+            }
+
+            &-subtitle2:after{
+                  content: url('/images/2.svg');
+            }
+
+            &-subtitle3:after{
+                  content: url('/images/3.svg');
+            }
+      }
+}

@@ -1,0 +1,58 @@
+.client {
+      background-image: url('/images/client-bg.png');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      width: 100%;
+      color: #ffffff;
+      padding: 50px 0;
+
+      & .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+      }
+
+      &_title {
+            font-family: "Leckerli One";
+            font-size: 33px;
+            font-weight: 400;
+            width: 100%;
+            text-align: center;
+            padding: 20px 0;
+            margin: 0;
+      }
+      &_text {
+            font-family: Montserrat;
+            font-size: 35px;
+            font-weight: 900;
+            width: 100%;
+            text-align: center;
+            margin: 0 0 20px 0;
+      }
+      &_description {
+            max-width: 600px;
+            line-height: 30px;
+            text-align: center;
+      }
+      &_projects {
+            display: flex;
+            justify-content: space-between;
+
+            &:first-child {
+                  margin-left: 0;
+            }
+            &:last-child {
+                  margin-right: 0;
+            }
+
+            & div {
+                  width: 25%;
+                  margin: 40px;
+            }
+
+            & div img {
+                  width: 100%;
+            }
+      }
+}
