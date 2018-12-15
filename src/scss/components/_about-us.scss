@@ -17,6 +17,10 @@
             font-weight: 400;
             margin: 0;
             padding-bottom: 20px;
+
+            @media (max-width: 560px) {
+                  font-size: 28px;
+            }
       }
 
       &_content {
@@ -24,11 +28,19 @@
             font-size: 17px;
             line-height: 30px;
 
+            @media (max-width: 660px) {
+                  width: 100%;
+            }
+
             & h4 {
                   font-family: Montserrat;
                   font-size: 30px;
                   font-weight: 700;
                   margin-top: 0;
+
+                  @media (max-width: 560px) {
+                        font-size: 33px;
+                  }
             }
       }
 
@@ -40,7 +52,7 @@
             height: 35px;
             border-radius: 30px;
             border: none;
-            margin: 0 0;
+            margin: 10px 0;
             cursor: pointer;
 
             &:hover {

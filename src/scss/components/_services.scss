@@ -15,6 +15,10 @@
             width: 100%;
             text-align: center;
             margin: 10px 0;
+
+            @media (max-width: 560px) {
+                  font-size: 28px;
+            }
       }
 
       &_text {
@@ -24,6 +28,10 @@
             width: 100%;
             text-align: center;
             margin: 0;
+
+            @media (max-width: 560px) {
+                  font-size: 28px;
+            }
       }
 
       &_card-container {
@@ -31,11 +39,19 @@
             justify-content: space-between;
             padding: 20px 0;
 
+            @media (max-width: 916px) {
+                  flex-direction: column;
+            }
+
       }
 
       &_card {
             width: 33%;
             padding-left: 100px;
+
+            @media (max-width: 916px) {
+                  width: 100%;
+            }
 
             &-subtitle1,
             &-subtitle2,

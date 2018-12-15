@@ -1,12 +1,14 @@
 @import './variables';
 @import './normalize';
 
-@import 'partials/header';
-@import './partials/home';
-@import './partials/about-us';
-@import './partials/services';
-@import './partials/profile';
-@import './partials/client';
+@import 'components/header';
+@import 'components/home';
+@import 'components/about-us';
+@import 'components/services';
+@import 'components/profile';
+@import 'components/client';
+@import 'components/blog';
+@import 'components/contact';
 
 * {
       box-sizing: border-box;
@@ -21,7 +23,5 @@ body {
       margin: 0 auto;
       padding: 0 15px;
 
-      @media (max-width: 1024px) {
-            padding: 0 50px;
-      }
+
 }

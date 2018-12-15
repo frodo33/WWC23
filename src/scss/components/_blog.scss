@@ -1,0 +1,210 @@
+.blog {
+      box-sizing: border-box;
+      padding: 50px 0;
+
+      & .container {
+            display: flex;
+            justify-content: space-between;
+
+            @media (max-width: 966px) {
+                  flex-wrap: wrap;
+            }
+      }
+
+      &_articles {
+            width: 50%;
+            margin-right: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            @media (max-width: 966px) {
+                  width: 100%;
+                  margin: 0 0 40px 0;
+            }
+            
+            & article:first-of-type {
+                  background: #007ef9;
+                  padding: 20px 30px;
+                  margin: 40px 0;
+                  width: 100%;
+
+                  & p {
+                        font-family: Lato;
+                        color:  #ffffff;
+                        font-size: 20px;
+                        font-weight: 700;
+                        line-height: 30px;
+                        text-align: center;
+                  }
+            }
+
+            & article:nth-of-type(2) {
+                  background: #b9b8b830;
+                  width: calc(50% - 20px);
+                  padding: 20px 30px;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+
+                  & span {
+                        color:  #353535;
+                        font-size: 20px;
+                        font-weight: 700;
+                        line-height: 30px;
+                        display: block;
+                  }
+
+                  & h4 {
+                        font-family: Montserrat;
+                        color:  #353535;
+                        font-size: 30px;
+                        font-weight: 900;
+                        text-align: center;
+                  }
+            }
+
+            & article:nth-of-type(3) {
+                  background: #000;
+                  width: calc(50% - 20px);
+                  padding: 20px 30px;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+
+                  & span {
+                        color:  #ffffff;
+                        font-size: 20px;
+                        font-weight: 700;
+                        line-height: 30px;
+                        display: block;
+                  }
+
+                  & h4 {
+                        font-family: Montserrat;
+                        color:  #ffffff;
+                        font-size: 30px;
+                        font-weight: 900;
+                        text-align: center;
+                  }
+            }
+      }
+
+      &_articles-aside {
+            width: 50%;
+            align-self: flex-end;
+
+            @media (max-width: 966px) {
+                  width: 100%;
+            }
+
+            & article:first-child {
+                  background-image: url('/images/blog_bg.png');
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  padding: 20px 30px;
+
+                  & span {
+                        color:  #ffffff;
+                        font-size: 20px;
+                        font-weight: 700;
+                        line-height: 30px;
+                        display: block;
+                  }
+
+                  & h4 {
+                        font-family: Montserrat;
+                        color:  #ffffff;
+                        font-size: 30px;
+                        font-weight: 900;
+                        text-align: center;
+                        margin-bottom: 0;
+                        padding-top: 205px;
+                  }
+
+                  & p {
+                        font-family: Lato;
+                        color:  #ffffff;
+                        font-size: 17px;
+                        font-weight: 700;
+                        line-height: 30px;
+                        text-align: center;
+                  }
+            }
+
+            & article:last-child {
+                  background: #e91d62;
+                  margin-top: 40px;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  padding: 20px 30px;
+
+                  & span {
+                        color:  #ffffff;
+                        font-size: 20px;
+                        font-weight: 700;
+                        line-height: 30px;
+                        display: block;
+                  }
+
+                  & h4 {
+                        font-family: Montserrat;
+                        color:  #ffffff;
+                        font-size: 30px;
+                        font-weight: 900;
+                        text-align: center;
+                        margin: 10px;
+                  }
+
+                  & p {
+                        font-family: Lato;
+                        color:  #ffffff;
+                        font-size: 17px;
+                        font-weight: 700;
+                        line-height: 30px;
+                        text-align: center;
+                  }
+            }
+      }
+
+      &_header {}
+
+      &_title {
+            font-family: "Leckerli One";
+            color: $headers-color;
+            font-size: 33px;
+            font-weight: 400;
+            width: 100%;
+            padding: 20px 0;
+            margin: 0;
+
+            @media (max-width: 560px) {
+                  font-size: 28px;
+            }
+      }
+
+      &_text {
+            font-family: Montserrat;
+            font-size: 35px;
+            font-weight: 900;
+            width: 100%;
+            margin: 0 0 20px 0;
+
+            @media (max-width: 560px) {
+                  font-size: 33px;
+            }
+      }
+
+      &_description {
+            font-family: Lato;
+            color:  $headers-color;
+            font-size: 17px;
+            font-weight: 400;
+            line-height: 30px;
+            text-align: left;
+      }
+}

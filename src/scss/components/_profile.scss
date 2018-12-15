@@ -11,6 +11,10 @@
             width: 100%;
             text-align: center;
             margin: 20px 0;
+
+            @media (max-width: 560px) {
+                  font-size: 28px;
+            }
       }
       &_text {
             font-family: Montserrat;
@@ -19,6 +23,10 @@
             width: 100%;
             text-align: center;
             margin: 0 0 20px 0;
+
+            @media (max-width: 560px) {
+                  font-size: 33px;
+            }
       }
       &_gallery {
             width: 100%;

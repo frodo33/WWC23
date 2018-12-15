@@ -5,9 +5,9 @@
       z-index: 99;
 
    & .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
       }
 
       &_logo {
@@ -16,6 +16,10 @@
             font-size: 34px;
             font-weight: 900;
             text-align: center;
+
+            @media (max-width: 966px) {
+                  font-size: 24px;
+            }
 
             & span {
                   color: $main-color;
@@ -31,7 +35,7 @@
       &_menu {
             color: #ffffff;
             list-style: none;
-            display: flex;
+            display: none; //flex
             font-size: 15px;
             font-weight: 700;
 
