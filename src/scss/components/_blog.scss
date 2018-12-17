@@ -6,7 +6,7 @@
             display: flex;
             justify-content: space-between;
 
-            @media (max-width: 966px) {
+            @media #{$tablet} {
                   flex-wrap: wrap;
             }
       }
@@ -18,7 +18,7 @@
             flex-wrap: wrap;
             justify-content: space-between;
 
-            @media (max-width: 966px) {
+            @media #{$tablet} {
                   width: 100%;
                   margin: 0 0 40px 0;
             }
@@ -30,16 +30,12 @@
                   width: 100%;
 
                   & p {
-                        font-family: Lato;
-                        color:  #ffffff;
-                        font-size: 20px;
-                        font-weight: 700;
-                        line-height: 30px;
-                        text-align: center;
+                        @include article-text;
                   }
             }
 
-            & article:nth-of-type(2) {
+            & article:nth-of-type(2),
+            & article:nth-of-type(3) {
                   background: #b9b8b830;
                   width: calc(50% - 20px);
                   padding: 20px 30px;
@@ -48,46 +44,30 @@
                   justify-content: center;
                   align-items: center;
 
+                  @media #{$mobile} {
+                        padding: 10px 0;
+                  }
+
                   & span {
+                        @include date;
                         color:  #353535;
-                        font-size: 20px;
-                        font-weight: 700;
-                        line-height: 30px;
-                        display: block;
                   }
 
                   & h4 {
-                        font-family: Montserrat;
+                        @include article-title;
                         color:  #353535;
-                        font-size: 30px;
-                        font-weight: 900;
-                        text-align: center;
                   }
             }
 
             & article:nth-of-type(3) {
                   background: #000;
-                  width: calc(50% - 20px);
-                  padding: 20px 30px;
-                  display: flex;
-                  flex-direction: column;
-                  justify-content: center;
-                  align-items: center;
 
                   & span {
-                        color:  #ffffff;
-                        font-size: 20px;
-                        font-weight: 700;
-                        line-height: 30px;
-                        display: block;
+                        color: #fff;
                   }
 
                   & h4 {
-                        font-family: Montserrat;
-                        color:  #ffffff;
-                        font-size: 30px;
-                        font-weight: 900;
-                        text-align: center;
+                        color: #fff;
                   }
             }
       }
@@ -96,7 +76,7 @@
             width: 50%;
             align-self: flex-end;
 
-            @media (max-width: 966px) {
+            @media #{$tablet} {
                   width: 100%;
             }
 
@@ -108,30 +88,19 @@
                   padding: 20px 30px;
 
                   & span {
+                        @include date;
                         color:  #ffffff;
-                        font-size: 20px;
-                        font-weight: 700;
-                        line-height: 30px;
-                        display: block;
                   }
 
                   & h4 {
-                        font-family: Montserrat;
+                        @include article-title;
                         color:  #ffffff;
-                        font-size: 30px;
-                        font-weight: 900;
-                        text-align: center;
                         margin-bottom: 0;
                         padding-top: 205px;
                   }
 
                   & p {
-                        font-family: Lato;
-                        color:  #ffffff;
-                        font-size: 17px;
-                        font-weight: 700;
-                        line-height: 30px;
-                        text-align: center;
+                        @include article-text;
                   }
             }
 
@@ -144,63 +113,37 @@
                   padding: 20px 30px;
 
                   & span {
+                        @include date;
                         color:  #ffffff;
-                        font-size: 20px;
-                        font-weight: 700;
-                        line-height: 30px;
-                        display: block;
                   }
 
                   & h4 {
-                        font-family: Montserrat;
+                        @include article-title;
                         color:  #ffffff;
-                        font-size: 30px;
-                        font-weight: 900;
-                        text-align: center;
                         margin: 10px;
                   }
 
                   & p {
-                        font-family: Lato;
-                        color:  #ffffff;
-                        font-size: 17px;
-                        font-weight: 700;
-                        line-height: 30px;
-                        text-align: center;
+                        @include article-text;
                   }
             }
       }
 
-      &_header {}
-
       &_title {
-            font-family: "Leckerli One";
+            @include title;
             color: $headers-color;
-            font-size: 33px;
-            font-weight: 400;
             width: 100%;
             padding: 20px 0;
             margin: 0;
-
-            @media (max-width: 560px) {
-                  font-size: 28px;
-            }
       }
 
       &_text {
-            font-family: Montserrat;
-            font-size: 35px;
-            font-weight: 900;
+            @include subtitle;
             width: 100%;
             margin: 0 0 20px 0;
-
-            @media (max-width: 560px) {
-                  font-size: 33px;
-            }
       }
 
       &_description {
-            font-family: Lato;
             color:  $headers-color;
             font-size: 17px;
             font-weight: 400;

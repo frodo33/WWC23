@@ -5,28 +5,17 @@
 
 
       &_title {
-            font-family: "Leckerli One";
-            font-size: 33px;
-            font-weight: 400;
+            @include title;
             width: 100%;
             text-align: center;
             margin: 20px 0;
-
-            @media (max-width: 560px) {
-                  font-size: 28px;
-            }
       }
+
       &_text {
-            font-family: Montserrat;
-            font-size: 35px;
-            font-weight: 900;
+            @include subtitle;
             width: 100%;
             text-align: center;
             margin: 0 0 20px 0;
-
-            @media (max-width: 560px) {
-                  font-size: 33px;
-            }
       }
       &_gallery {
             width: 100%;
@@ -35,6 +24,15 @@
             grid-template-areas:
                   "item1 item1 item4 item5"
                   "item2 item3 item4 item6";
+
+            @media (max-width: 560px) {
+                  grid-template-columns: (2, 50%);
+                  grid-template-areas:
+                          "item1 item1"
+                          "item2 item3"
+                          "item4 item5"
+                          "item4 item6";
+            }
 
             @for $i from 1 through 6 {
 
@@ -49,6 +47,10 @@
 
             &-item1 img {
                   height: 100%;
+
+                  @media (max-width: 560px) {
+                        height: inherit;
+                  }
             }
 
             &-item3 img {

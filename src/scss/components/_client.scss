@@ -14,29 +14,18 @@
       }
 
       &_title {
-            font-family: "Leckerli One";
-            font-size: 33px;
-            font-weight: 400;
+            @include title;
             width: 100%;
             text-align: center;
             padding: 20px 0;
             margin: 0;
-
-            @media (max-width: 560px) {
-                  font-size: 28px;
-            }
       }
+
       &_text {
-            font-family: Montserrat;
-            font-size: 35px;
-            font-weight: 900;
+            @include subtitle;
             width: 100%;
             text-align: center;
             margin: 0 0 20px 0;
-
-            @media (max-width: 560px) {
-                  font-size: 33px;
-            }
       }
       &_description {
             max-width: 600px;
@@ -46,6 +35,10 @@
       &_projects {
             display: flex;
             justify-content: space-between;
+
+            @media (max-width: 660px){
+                  justify-content: center;
+            }
 
             @media (max-width: 916px) {
                   flex-wrap: wrap;
@@ -70,8 +63,8 @@
                   }
 
                   @media (max-width: 660px){
-                        width: 100%;
-                        padding: 60px 20px;
+                        width: 70%;
+                        padding: 50px 20px;
                   }
 
             }

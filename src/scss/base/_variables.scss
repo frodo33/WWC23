@@ -1,0 +1,85 @@
+$main-color: #0081ff;
+$headers-color: #575757;
+
+$tablet: 'screen and (max-width: 966px)';
+$mobile: 'screen and (max-width: 560px)';
+
+$font-subtitle: Montserrat, sans-serif;
+$font-title: "Leckerli One", sans-serif;
+$font-size-title: 33px;
+$font-size-title-mobile: 28px;
+$font-size-subtitle: 35px;
+$font-size-subtitle-mobile: 33px;
+
+@mixin title {
+      font-family: $font-title;
+      font-size: $font-size-title;
+      font-weight: 400;
+
+      @media (max-width: 560px) {
+            font-size: $font-size-title-mobile;
+      }
+}
+
+@mixin subtitle {
+      font-family: $font-subtitle;
+      font-size: $font-size-subtitle;
+      font-weight: 900;
+
+      @media (max-width: 560px) {
+            font-size: $font-size-subtitle-mobile;
+      }
+}
+
+@mixin btn {
+      font-size: 15px;
+      width: 130px;
+      height: 35px;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+
+      &:focus {
+            outline: none;
+      }
+
+      &:active {
+            transform: scale(1.05);
+      }
+}
+
+// blog section
+
+@mixin article-title {
+      font-family: $font-subtitle;
+      font-size: 30px;
+      font-weight: 900;
+      text-align: center;
+
+      @media #{$mobile} {
+            font-size: 24px;
+      }
+}
+
+@mixin article-text {
+      color:  #ffffff;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 30px;
+      text-align: center;
+
+      @media #{$mobile} {
+            font-size: 17px;
+      }
+}
+
+@mixin date {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 30px;
+      display: block;
+
+      @media #{$mobile} {
+            font-size: 17px;
+      }
+}

@@ -1,7 +1,8 @@
-@import './variables';
-@import './normalize';
+@import './base/global';
+@import './base/variables';
+@import './base/normalize';
 
-@import 'components/header';
+@import 'components/nav';
 @import 'components/home';
 @import 'components/about-us';
 @import 'components/services';
@@ -9,19 +10,3 @@
 @import 'components/client';
 @import 'components/blog';
 @import 'components/contact';
-
-* {
-      box-sizing: border-box;
-}
-body {
-      font-family: 'Lato', 'LeckerliOne', 'Montserrat', 'sans-serif';
-      font-size: 17px;
-}
-
-.container {
-      max-width: 1224px;
-      margin: 0 auto;
-      padding: 0 15px;
-
-
-}

@@ -11,21 +11,14 @@
       }
 
       &_title {
+            @include title;
             width: 100%;
-            font-family: "Leckerli One";
-            font-size: 33px;
-            font-weight: 400;
             margin: 0;
             padding-bottom: 20px;
-
-            @media (max-width: 560px) {
-                  font-size: 28px;
-            }
       }
 
       &_content {
             width: 45%;
-            font-size: 17px;
             line-height: 30px;
 
             @media (max-width: 660px) {
@@ -33,38 +26,25 @@
             }
 
             & h4 {
-                  font-family: Montserrat;
+                  font-family: $font-subtitle;
                   font-size: 30px;
                   font-weight: 700;
                   margin-top: 0;
 
-                  @media (max-width: 560px) {
-                        font-size: 33px;
+                  @media #{$mobile} {
+                        font-size: 20px;
                   }
             }
       }
 
       &_btn {
+            @include btn;
             background: #3b4374;
             color: #ffffff;
-            font-size: 15px;
-            width: 130px;
-            height: 35px;
-            border-radius: 30px;
-            border: none;
             margin: 10px 0;
-            cursor: pointer;
 
             &:hover {
                   background: #3b437499;
-            }
-
-            &:focus {
-                  outline: none;
-            }
-
-            &:active {
-                  transform: scale(1.05);
             }
       }
 }

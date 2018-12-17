@@ -18,7 +18,7 @@
             flex-wrap: wrap;
             padding-top: 100px;
 
-            @media (max-width: 966px) {
+            @media #{$tablet} {
                   flex-wrap: wrap;
             }
 
@@ -56,22 +56,18 @@
 }
 
 .contact {
-      //background-image: url('/images/contact-bg.png');
-      //background-repeat: no-repeat;
-      //background-position: center;
-      //background-size: cover;
-      //color: #ffffff;
-      //padding: 100px 0;
-
       display: flex;
       flex-wrap: wrap;
       padding: 0 30px;
 
+      @media #{$mobile} {
+            padding: 0;
+      }
 
       &_details {
             width: 50%;
 
-            @media (max-width: 966px) {
+            @media #{$tablet} {
                   width: 100%;
                   display: flex;
                   flex-direction: column;
@@ -80,92 +76,24 @@
       }
 
       &_title {
-            font-family: 'Leckerli One';
-            font-size: 33px;
-            font-weight: 400;
+            @include title;
             text-align: left;
             width: 100%;
             margin: 0;
 
-            @media (max-width: 560px) {
-                  font-size: 28px;
+            @media #{$mobile} {
+                  text-align: center;
             }
       }
 
       &_text {
-            font-family: Montserrat;
-            font-size: 35px;
-            font-weight: 900;
+            @include subtitle;
             text-align: left;
             margin-bottom: 50px;
-
-            @media (max-width: 560px) {
-                  font-size: 33px;
-            }
       }
 
-      &_email {
-            display: flex;
-            flex-direction: column;
-            min-width: 300px;
-            position: relative;
-            padding: 0 0 50px 100px;
-
-            & span:first-child {
-                  font-weight: 700;
-                  padding-bottom: 5px;
-            }
-
-            & span:nth-child(n+2) {
-                  font-size: 16px;
-                  font-weight: 400;
-            }
-
-            & span:nth-child(n+2) a {
-                  text-decoration: none;
-                  color: inherit;
-            }
-
-            &:before {
-                  content: url("/images/address-icon1.svg");
-                  position: absolute;
-                  top: 0;
-                  left: 0;
-                  transform: scale(0.9);
-            }
-      }
-
-      &_phone {
-            display: flex;
-            flex-direction: column;
-            min-width: 300px;
-            position: relative;
-            padding: 0 0 50px 100px;
-
-            & span:first-child {
-                  font-weight: 700;
-                  padding-bottom: 5px;
-            }
-
-            & span:nth-child(n+2) {
-                  font-size: 16px;
-                  font-weight: 400;
-            }
-
-            & span:nth-child(n+2) a {
-                  text-decoration: none;
-                  color: inherit;
-            }
-
-            &:before {
-                  content: url("/images/address-icon3.svg");
-                  position: absolute;
-                  top: 0;
-                  left: 10px;
-                  transform: scale(0.9);
-            }
-      }
-
+      &_email,
+      &_phone,
       &_address {
             display: flex;
             flex-direction: column;
@@ -181,7 +109,6 @@
             & span:nth-child(n+2) {
                   font-size: 16px;
                   font-weight: 400;
-                  width: 200px;
             }
 
             & span:nth-child(n+2) a {
@@ -190,11 +117,52 @@
             }
 
             &:before {
-                  content: url("/images/address-icon2.svg");
                   position: absolute;
+                  transform: scale(0.9);
+            }
+
+      }
+
+      &_email {
+
+            &:before {
+                  content: url("/images/address-icon1.svg");
+                  top: 0;
+                  left: 0;
+
+                  @media #{$mobile} {
+                        left: 25px;
+                  }
+            }
+      }
+
+      &_phone {
+
+            &:before {
+                  content: url("/images/address-icon3.svg");
+                  top: 0;
+                  left: 10px;
+
+                  @media #{$mobile} {
+                        left: 35px;
+                  }
+            }
+      }
+
+      &_address {
+
+            & span:nth-child(n+2) {
+                  width: 200px;
+            }
+
+            &:before {
+                  content: url("/images/address-icon2.svg");
                   top: 0;
                   left: 2px;
-                  transform: scale(0.9);
+
+                  @media #{$mobile} {
+                        left: 27px;
+                  }
             }
       }
 
@@ -202,14 +170,15 @@
       &_form {
             width: 50%;
 
-            @media (max-width: 966px) {
+            @media #{$tablet} {
                   width: 100%;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
             }
 
             &-title {
-                  font-family: Montserrat;
-                  font-size: 35px;
-                  font-weight: 900;
+                  @include subtitle;
             }
 
             &-field {
@@ -218,12 +187,24 @@
                   align-items: center;
                   padding: 10px 0;
 
+                  @media #{$tablet} {
+                        flex-direction: column;
+                        align-items: flex-start;
+                        width: 80%;
+                  }
+
+
                   & label {
                         display: block;
                         width: 20%;
+
+                        @media #{$tablet} {
+                              padding-bottom: 10px;
+                        }
                   }
 
-                  & input {
+                  & input,
+                  & textarea {
                         background: #2b2b2b;
                         border: none;
                         border-radius: 15px;
@@ -232,6 +213,10 @@
                         color: #ffffff;
                         padding: 0 10px;
 
+                        @media #{$tablet} {
+                              width: 100%;
+                        }
+
                         &:focus {
                               outline: none;
                               border: 1px solid springgreen;
@@ -239,48 +224,24 @@
                   }
 
                   & textarea {
-                        background: #2b2b2b;
-                        border: none;
-                        border-radius: 15px;
-                        width: 80%;
                         height: 100px;
-                        color: #ffffff;
-                        padding: 0 10px;
                         overflow: hidden;
                         resize: none;
-
-                        &:focus {
-                              outline: none;
-                              border: 1px solid springgreen;
-                        }
                   }
             }
 
             &-btn {
+                  @include btn;
                   background: #0280f9;
                   color: #ffffff;
-                  font-size: 15px;
-                  width: 130px;
-                  height: 35px;
-                  border-radius: 30px;
-                  border: none;
                   margin: 30px 100px;
-                  cursor: pointer;
 
-                  @media (max-width: 966px) {
-                        margin: 0;
+                  @media #{$tablet} {
+                        margin: 10px 0;
                   }
 
                   &:hover {
                         background: #0280f999;
-                  }
-
-                  &:focus {
-                        outline: none;
-                  }
-
-                  &:active {
-                        transform: scale(1.05);
                   }
             }
       }
