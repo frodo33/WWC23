@@ -38,13 +38,8 @@
       }
 
       &_btn {
-            @include btn;
-            background: #3b4374;
+            @include btn (#3b4374, #3b437499);
             color: #ffffff;
             margin: 10px 0;
-
-            &:hover {
-                  background: #3b437499;
-            }
       }
 }

@@ -3,7 +3,6 @@
       flex-direction: column;
       align-items: center;
 
-
       &_title {
             @include title;
             width: 100%;
@@ -55,6 +54,36 @@
 
             &-item3 img {
                   height: 100%;
+            }
+      }
+}
+
+
+
+// gallery
+
+
+.gallery {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      background: #00000090;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 100;
+
+      & .item {
+            max-width: 400px;
+            width: 80%;
+            border: 5px solid white;
+            box-shadow: 0 0 20px 10px #ffffff;
+            position: relative;
+
+            & img {
+                  width: 100%;
             }
       }
 }

@@ -31,13 +31,21 @@ $font-size-subtitle-mobile: 33px;
       }
 }
 
-@mixin btn {
+@mixin btn ($bgFrom, $bgTo){
       font-size: 15px;
       width: 130px;
       height: 35px;
       border-radius: 30px;
       border: none;
       cursor: pointer;
+      background: linear-gradient(to right, $bgTo 50%, $bgFrom 50%);
+      background-size: 200% 100%;
+      background-position: right;
+      transition: .4s linear;
+
+      &:hover {
+            background-position: left;
+      }
 
       &:focus {
             outline: none;
@@ -45,6 +53,7 @@ $font-size-subtitle-mobile: 33px;
 
       &:active {
             transform: scale(1.05);
+            transition: none;
       }
 }
 
@@ -81,5 +90,45 @@ $font-size-subtitle-mobile: 33px;
 
       @media #{$mobile} {
             font-size: 17px;
+      }
+}
+
+@mixin articles-hover {
+      &:before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 400px;
+            right: 400px;
+            bottom: 20px;
+            transition: .4s;
+      }
+
+      &:hover:before {
+            border-top: 1px solid white;
+            border-bottom: 1px solid white;
+            left: 10px;
+            right: 10px;
+      }
+
+      &:after {
+            content: '';
+            position: absolute;
+            top: 100px;
+            left: 20px;
+            right: 20px;
+            bottom: 100px;
+            transition: .4s;
+      }
+
+      &:hover:after {
+            border-left: 1px solid white;
+            border-right: 1px solid white;
+            top: 10px;
+            bottom: 10px;
+      }
+
+      &:hover {
+            transform: scale(0.95);
       }
 }

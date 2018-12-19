@@ -54,14 +54,9 @@
       }
 
       &_btn {
-            @include btn;
-            background: #00aeed;
+            @include btn (#00aeed, $main-color);
             color: #ffffff;
             margin: 50px 0;
-
-            &:hover {
-                  background: $main-color;
-            }
       }
 
       &_img {

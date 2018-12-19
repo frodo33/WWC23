@@ -36,6 +36,11 @@
                   justify-content: center;
                   align-items: center;
 
+                  &:hover {
+                        background: $main-color;
+                        transform: scale(0.95);
+                  }
+
                   & i {
                         font-size: 25px;
                   }
@@ -231,17 +236,12 @@
             }
 
             &-btn {
-                  @include btn;
-                  background: #0280f9;
+                  @include btn (#0280f9, #0280f999);
                   color: #ffffff;
                   margin: 30px 100px;
 
                   @media #{$tablet} {
                         margin: 10px 0;
-                  }
-
-                  &:hover {
-                        background: #0280f999;
                   }
             }
       }
